@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+   
+</head>
+<style>
+    body{
+        font-family: "Cairo", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0;
+        background: linear-gradient(45deg, rgb(6, 6, 122),rgb(78, 1, 78));
+    }
+     h1,h2,h3,h4,h5,h6 {
+        margin: 0px auto;
+    }
+    
+    #time{
+        
+        font-weight: 100;
+        font-size: 40px;
+        /* width: 30%; */
+    }
+    #city{
+        font-weight: 300;
+        font-size: 100px;
+        /* width: 30%; */
+        /* margin: 0 auto; */
+    }
+    .card {
+        margin: 30px;
+        font-size: 20px;
+        height: 90%;
+        width: 13%;
+        box-shadow: 0px 10px 5px rgb(0, 0, 0/0.25);
+        background: white;
+    }
+    .header{
+        background: linear-gradient(45deg, #5709ee, #7a37bf);
+        color: aliceblue;
+    }
+    .header h2{
+        font-weight: 200;
+    }
+    .prayer{
+        font-size: 50px;
+    }
+    .center{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    #selector {
+        background: none;
+        color: aliceblue;
+        border-radius: 10px;
+        padding: 5px;
+        height: 50px;
+        width: 270px;
+        font-size: 20px;
+        font-family: "Cairo", sans-serif;
+       
+    }
+  
+    
+</style>
+<body>
+    <!-- Main -->
+    <div id="main" style="height: 100vh;" >
+        <!-- City Name + Current Time -->
+        <div class="center" style="margin-top: 100px; flex-direction: column;">
+            <!-- City Name -->
+            <div style="color: aliceblue;">
+               <h1 id="city">Cairo</h1> 
+               
+            </div>
+            <div style="color: aliceblue;">
+                <h6 id="time"></h6>
+            </div>
+            <!-- //City Name// -->
+            
+            
+        </div>
+        <hr style="margin: 0px 70px; border-color: #ac84f0;">
+        <!-- //Current Time// -->
+        <!-- Prayer Time -->
+        <div id="prayer-time" style="display: flex; margin-top: 70px; height: 200px;">
+            <!-- CARD1 -->
+            <div class="card">
+                <div class="header center">
+                    <h2 >Fajr</h2>
+                </div>
+                <div class="prayer center" style="height: 70%;" >
+                    <h4 id = "Fajr">5:00</h4>
+                </div>
+            </div>
+            <!-- //CARD1// -->
+            <!-- CARD2 -->
+            <div class="card">
+                <div class="header center">
+                    <h2 >Sunrise</h2>
+                </div>
+                <div class="prayer center" style="height: 70%;" >
+                    <h4 id="Sunrise">5:00</h4>
+                </div>
+            </div>
+            <!-- //CARD2// -->
+            <!-- CARD3 -->
+            <div class="card">
+                <div class="header center">
+                    <h2 >Dhuhr</h2>
+                </div>
+                <div class="prayer center" style="height: 70%;" >
+                    <h4 id="Dhuhr">5:00</h4>
+                </div>
+            </div>
+            <!-- //CARD3// -->
+            <!-- CARD4 -->
+            <div class="card">
+                <div class="header center">
+                    <h2 >Asr</h2>
+                </div>
+                <div class="prayer center" style="height: 70%;" >
+                    <h4 id="Asr">5:00</h4>
+                </div>
+            </div>
+            <!-- //CARD4// -->
+            <!-- CARD5 -->
+            <div class="card">
+                <div class="header center">
+                    <h2 >Maghrib</h2>
+                </div>
+                <div class="prayer center" style="height: 70%;" >
+                    <h4 id="Maghrib">5:00</h4>
+                </div>
+            </div>
+            <!-- //CARD5// -->
+            <!-- CARD6 -->
+            <div class="card">
+                <div class="header center">
+                    <h2 >Isha</h2>
+                </div>
+                <div class="prayer center" style="height: 70%;" >
+                    <h4 id="Isha">5:00</h4>
+                </div>
+            </div>
+            <!-- //CARD6// -->
+        </div>
+        <!-- //Prayer Time// -->
+
+        <!-- CITY SELECT -->
+        <div class="center" style="margin-top: 130px;">
+            <select id= "selector"  name="">
+            </select>
+        </div>
+        <!-- //CITY SELECT// -->
+
+    </div>
+    <!-- //Main// -->
+    <script src="/node_modules/axios/dist/axios.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
